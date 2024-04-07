@@ -1,0 +1,146 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.wrapper{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.center{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*Head Container*/
+
+@mixin onlylarge($w)
+{
+    @media only screen and (max-width: $w)
+    {
+        @content;
+    }
+}
+
+.head-container{
+    .bg-gradient{
+        height: 1084px;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 86.13%, #fff 100%), 
+        url(../images/head-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        header{
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo{
+                font-family: 'Gilroy';
+                font-weight: bold;
+                font-size: 28px;
+                color: #fff;
+                letter-spacing: 0.01em;
+                width: 78px;
+            }
+            .cart{
+                width: 78px;
+                text-align: right;
+            }
+            .menu{
+                ul{
+                    display: flex;
+                    width: 478px;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    li{
+                        a{
+                            font-family: 'Gilroy';
+                            font-weight: 500;
+                            font-size: 18px;
+                            color: #fff;
+                            transition: 0.8s;
+                            text-decoration: none;
+                            &:hover{
+                                color: #e58411;
+                            }
+                            img{
+                                vertical-align: middle;
+                                margin-left: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        h1{
+            font-family: 'Gilroy';
+            font-weight: bold;
+            font-size: 80px;
+            line-height: 130%;
+            letter-spacing: -0.01em;
+            text-align: center;
+            color: #fff;
+            width: 861px;
+            margin: 0 auto;
+            margin-top: 92px;
+            margin-bottom: 14px;
+
+            @include onlylarge(1024px){width: 80%; font-size: 60px;}
+            @include onlylarge(768px){font-size: 42px;}
+            @include onlylarge(450px){font-size: 30px;}
+        }
+    }
+}
