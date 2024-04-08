@@ -79,6 +79,11 @@ table {
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (max-width: 1300px) {
+  .head-container .bg-gradient header {
+    width: calc(100% - 80px);
+  }
+}
 .head-container .bg-gradient header .logo {
   font-family: "Gilroy";
   font-weight: bold;
@@ -96,6 +101,16 @@ table {
   width: 478px;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .head-container .bg-gradient header .menu ul {
+    width: 370px;
+  }
+}
+@media only screen and (max-width: 625px) {
+  .head-container .bg-gradient header .menu ul {
+    display: none;
+  }
 }
 .head-container .bg-gradient header .menu ul li a {
   font-family: "Gilroy";
@@ -139,5 +154,91 @@ table {
 @media only screen and (max-width: 450px) {
   .head-container .bg-gradient h1 {
     font-size: 30px;
+  }
+}
+.head-container .bg-gradient p {
+  font-size: 24px;
+  font-family: "Gilroy";
+  line-height: 160%;
+  color: #FFFFFF;
+  width: 606px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 45px;
+}
+@media only screen and (max-width: 1024px) {
+  .head-container .bg-gradient p {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 606px) {
+  .head-container .bg-gradient p {
+    padding-top: 10px;
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .head-container .bg-gradient p {
+    font-size: 16px;
+  }
+}
+.head-container .bg-gradient form {
+  text-align: center;
+  width: 344px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 25px;
+}
+@media only screen and (max-width: 380px) {
+  .head-container .bg-gradient form {
+    width: 95%;
+  }
+}
+.head-container .bg-gradient form input {
+  border: 0.86px solid rgba(255, 255, 255, 0.6);
+  border-radius: 42px;
+  padding: 8px 8px 8px 20px;
+  width: 344px;
+  height: 56px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.15);
+  font-family: "Gilroy";
+  font-size: 18px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.8);
+}
+@media only screen and (max-width: 380px) {
+  .head-container .bg-gradient form input {
+    width: 100%;
+  }
+}
+.head-container .bg-gradient form button {
+  position: absolute;
+  border-radius: 24px;
+  padding: 11px;
+  background: #e58411;
+  right: 8px;
+  bottom: 8px;
+  left: 296px;
+  top: 8px;
+  width: 40px;
+}
+@media only screen and (max-width: 380px) {
+  .head-container .bg-gradient form button {
+    left: auto;
+  }
+}
+.head-container .bg-gradient .selected {
+  margin-left: 169px;
+}
+@media only screen and (max-width: 768px) {
+  .head-container .bg-gradient .selected {
+    margin-left: 70px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .head-container .bg-gradient .selected {
+    margin-top: 43px;
   }
 }/*# sourceMappingURL=main.css.map */

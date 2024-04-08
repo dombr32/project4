@@ -84,6 +84,8 @@ table {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            
+            @include onlylarge(1300px){width: calc(100% - 80px)}
 
             .logo{
                 font-family: 'Gilroy';
@@ -103,6 +105,9 @@ table {
                     width: 478px;
                     justify-content: space-between;
                     align-items: center;
+                    
+                    @include onlylarge(768px){width: 370px}
+                    @include onlylarge(625px){display: none}
 
                     li{
                         a{
@@ -141,6 +146,66 @@ table {
             @include onlylarge(1024px){width: 80%; font-size: 60px;}
             @include onlylarge(768px){font-size: 42px;}
             @include onlylarge(450px){font-size: 30px;}
+        }
+
+        p{
+            font-size: 24px;
+            font-family: 'Gilroy';
+            line-height: 160%;
+            color: #FFFFFF;
+            width: 606px;
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 45px;
+            
+            @include onlylarge(1024px){font-size: 20px}
+            @include onlylarge(606px){padding-top: 10px; width: 80%}
+            @include onlylarge(450px){font-size: 16px}
+        }
+
+        form{
+            text-align: center;
+            width: 344px;
+            margin: 0 auto;
+            position: relative;
+            margin-bottom: 25px;
+
+            @include onlylarge(380px){width: 95%}
+            input{
+                border: 0.86px solid rgba(255, 255, 255, 0.6);
+                border-radius: 42px;
+                padding: 8px 8px 8px 20px;
+                width: 344px;
+                height: 56px;
+                backdrop-filter: blur(8px);
+                background: rgba(255, 255, 255, 0.15);
+                font-family: 'Gilroy';
+                font-size: 18px;
+                line-height: 150%;
+                color: rgb(255, 255, 255, 0.8);
+
+                @include onlylarge(380px){width: 100%}
+            }
+            button{
+                position: absolute;
+                border-radius: 24px;
+                padding: 11px;
+                background: #e58411;
+                right: 8px;
+                bottom: 8px;
+                left: 296px;
+                top: 8px;
+                width: 40px;
+
+                @include onlylarge(380px){left: auto}
+            }
+        }
+
+        .selected{
+            margin-left: 169px;
+
+            @include onlylarge(768px){margin-left: 70px;}
+            @include onlylarge(600px){margin-top: 43px;}
         }
     }
 }
